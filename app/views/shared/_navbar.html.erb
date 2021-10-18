@@ -1,35 +1,110 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <%= link_to "/",id: "icon", class: "navbar-brand" do %>
+    <%= image_tag "logo.png", class:"logo" %>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
+      <li class="nav-item">
+        <%= link_to "Acceuil", "#", class: "nav-link btn btn-ghost mt-1" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Horaire","#", class: "nav-link btn btn-ghost mt-1" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Activité","#", class: "nav-link btn btn-ghost mt-1" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "MDP","#", class: "nav-link btn btn-ghost mt-1" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Legal","#", class: "nav-link btn btn-ghost mt-1" %>
+      </li>
+      <% if user_signed_in?%>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link btn btn-ghost mt-1" %>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+          <button type="button" class="btn btn-ghost mt-1" data-toggle="modal" data-target="#registerModal">
+              Register
+          </button>
+          <button type="button" class="btn btn-ghost mt-1" data-toggle="modal" data-target="#loginModal">
+              Login
+          </button>
+          </li>
       <% end %>
     </ul>
+  </div>
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #bcf1c3; color: white">
+          <h5 class="modal-title" id="registerModalLabel">Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
+            <%= f.error_notification %>
+            <div class="form-inputs">
+              <%= f.input :email,
+                        required: true,
+                        autofocus: false,
+                        input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                        required: false,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+            </div>
+          </div>
+          <div class="modal-footer" style="background-color: #bcf1c3; color: white">
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost bg-white " data-dismiss="modal">Close</button>
+              <%= f.button :submit, "Sign up", class: "btn btn-ghost bg-white" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #bcf1c3; color: white">
+          <h5 class="modal-title" id="loginModalLabel">Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for(User.new, as: :user, url: session_path(:user)) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+              <%= f.input :password,
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+              <%= f.input :remember_me, as: :boolean %>
+            </div>
+          </div>
+          <div class="modal-footer" style="background-color: #bcf1c3; color: white">
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost bg-white" data-dismiss="modal">Close</button>
+              <%= f.button :submit, "Login", class: "btn btn-ghost bg-white" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
