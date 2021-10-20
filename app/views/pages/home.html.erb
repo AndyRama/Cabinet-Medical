@@ -1,79 +1,75 @@
-<%= render 'shared/banner' %>
-<section class="about" id="about">
-  <div class="max-width">
-
-    <div class="about-content">
-      <div class="column left">
-        <%= image_tag "Cabinet.png" %>
-      </div>
-      <div class="column right">
-        <div class="text"><span><h2>Cabinet de Merignac Beutre</h2></span></div>
-        <p>Le Dr Ramaroson Lucienne vous recoit dans son cabinet medical à Merignac beutre pour des consultations d'ordre médicale et pédiatrique</p>
-        <br>
-        <div class="text"><span><h2>Heure d'ouverture </h2></span></div>        
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Mardi</th> 
-              <th scope="col">Mercredi</th>
-              <th scope="col">Vendredi</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="col">Ouverture</th>
-              <th scope="col">17h</th>
-              <th scope="col">16h</th>
-              <th scope="col">16h</th>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th scope="col">Fermeture</th>
-              <th scope="col">20h</th>
-              <th scope="col">20h</th>
-              <th scope="col">20h</th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>  
-  </div>
-</div>
-</section>
 <section>
+  <div class="banner" style="background-image: url(<%= image_path 'banner.jpg'%>);">
+    <div class="container">
+      <div class="about">
+        <div class="about-content">
+          <div class="column-left">
+          <h1>Cabinet Medical</h1>
+          <p>Le docteur Lucienne Ramaroson Vous recoit dans son cabinet pour des<br>consultation de medecine general et pediatrique.</p>
+          <a class="btn btn-flat" href="#">Prendre rendez-vous ?</a>
+          <div class="text"><span><h2>Heure d'ouverture </h2></span></div>        
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Mardi</th> 
+                <th scope="col">Mercredi</th>
+                <th scope="col">Vendredi</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">Ouverture</th>
+                <th scope="col">17h</th>
+                <th scope="col">16h</th>
+                <th scope="col">16h</th>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th scope="col">Fermeture</th>
+                <th scope="col">20h</th>
+                <th scope="col">20h</th>
+                <th scope="col">20h</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>  
+        <div class="column-right">
+          <%= image_tag 'Cabinet.png',class:'img' %>
+        </div>
   <main role="main" class="main-banner" id="blog-banner">
-    <div class="container mt-5 mb-4 border-bottom">
+    <div class="container mt-5 mb-4">
       <h1 class="h2">Contact</h1>
     </div>
   </main>
   <div class="container mb-5">
-  <div class="row">
-    <div class="col col-md-8">
-      <p>Vous pouvez prendre rendez-vous par téléphone directement ou via le calendrier de RDV </p>
-      <div class="row mt-5">
-        <div class="col-md-6 col-xl-5">
-          <p class="h4"><i class="fab fa-twitter text-info mr-2"></i> Telephone</p>
-          <p>06 84 05 43 11</p>
+    <div class="row">
+      <div class="col col-md-8">
+        <p>Vous pouvez prendre rendez-vous par téléphone directement ou via le calendrier de RDV </p>
+        <div class="row mt-5">
+          <div class="col-md-6 col-xl-5">
+            <p class="h4"><i class="fab fa-twitter text-info mr-2"></i> Telephone</p>
+            <p><span>06 84 05 43 11</span></p>
 
-          <p class="h4 mt-5"><i class="fas fa-envelope text-alert mr-2"></i>En voiture</p>
-          <p>parking 3 places <span>(voir acces)</span> </p>
-        </div>
-        <div class="col-md-6 col-xl-5">
-          <p class="h4"><i class="fab fa-facebook text-primary mr-2"></i> Localisation</p>
-          <p>220 avenue de l'argonne Beutre</p>
+            <p class="h4 mt-5"><i class="fas fa-envelope text-alert mr-2"></i>En voiture</p>
+            <p>parking 3 places <span>(voir acces)</span> </p>
+          </div>
+          <div class="col-md-6 col-xl-5">
+            <p class="h4"><i class="fab fa-facebook text-primary mr-2"></i> Localisation</p>
+            <p>220 avenue de l'argonne Beutre</p>
 
-          <p class="h4 mt-5"><i class="fab fa-instagram text-warning mr-2"></i> En bus</p>
-          <p>bus N°30 </p>
+            <p class="h4 mt-5"><i class="fab fa-instagram text-warning mr-2"></i> En bus</p>
+            <p>bus N°30 </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col col-md-4">
-      <iframe class="ml-lg-4 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=220 avenue de l'argonne,merignac,bordeaux,france " allowfullscreen></iframe>
+      <div class="col col-md-4">
+        <iframe class="sm-lg-3 mt-3" width="320" height="240" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBwOWZ_C1sw6lYJhxYk_LJJCI2uM9GW8IA&q=220 avenue de l'argonne,merignac,bordeaux,france " allowfullscreen></iframe>
+      </div>
     </div>
   </div>
-  <hr>
+
 </section>
 

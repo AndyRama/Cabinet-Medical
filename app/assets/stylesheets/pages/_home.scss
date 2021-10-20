@@ -46,8 +46,6 @@ section .title::after {
 
 .about {
   font-family: 'Poppins', sans-serif;
-  background-color: #bcf1c3;
-
 }
 
 .max-width {
@@ -94,4 +92,8 @@ section .title::after {
 .about .about-content .right a:hover {
   color: #31708f ;
   background: none;
+}
+.img {
+  height: 300px;
+  width: 394px;
 }
