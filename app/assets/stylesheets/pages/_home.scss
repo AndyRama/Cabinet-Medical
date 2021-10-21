@@ -46,6 +46,7 @@ section .title::after {
 
 .about {
   font-family: 'Poppins', sans-serif;
+
 }
 
 .max-width {
@@ -74,7 +75,7 @@ section .title::after {
 .about .about-content .right .text span {
   color:#31708f ;
 }
-.about .about-content .right p {
+.about .about-content .left p {
   text-align: justify;
 }
 .about .about-content .right a {
@@ -93,7 +94,11 @@ section .title::after {
   color: #31708f ;
   background: none;
 }
-.img {
-  height: 300px;
-  width: 394px;
+.column-left {
+  padding-left: -15px !important;
+}
+.container {
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
 }
