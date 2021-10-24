@@ -2,6 +2,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align:center;
 }
 
 .header-navbar p {
@@ -10,12 +11,12 @@
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
+
 }
 
 .header-navbar .header-navbar-infos {
     padding: 16px;
     width: 100%;
     color: #31708f;
-    background-image: linear-gradient(rgb(218, 241, 236),rgb(177, 231, 224));
-    border-color: #bce8f1;
+    background-color: white ;
 }

@@ -4,11 +4,18 @@
       <div class="about">
         <div class="about-content">
           <div class="col md-6">       
-          <h1 class="h2 mt-4 ">Cabinet Medical</h1>
+          <h1 class="h2 mt-4 mb-4 ">Cabinet Medical</h1>
             <div class="column-left">
-              <p>Le Dr Lucienne Ramaroson Vous recoit dans  son cabinet pour des  consultations de medecine general et pediatrique.</p>
-              <a class="btn btn-ghost" href="#">Prendre un RDV ?</a>
-              <h2 class="h2 mt-4">Horaire d'ouverture</h2>
+              <p>Le Docteur Lucienne Ramaroson vous reçoit dans son cabinet à Mérignac pour des consultations en médecine générale.</p>
+              <p>Consultations en urgence dans la journée possibles après accord téléphonique du Docteur Lucienne Ramaroson.</p> 
+
+              <!-- Calendly link widget begin -->
+              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+              <a class="btn btn-ghost" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/andyramaroson'});return false;">Prendre un rendez-vous</a>
+              <!-- Calendly link widget end -->
+                 
+              <h2 class="h2 mt-4 mb-4">Horaire</h2>
               <table class="table table-striped pl-4">
                 <thead>
                   <tr>
@@ -39,42 +46,38 @@
             </div>  
           </div>
           <div class="col md-6">
-            <div class="column-right mt-3">
+            <div class="column-right mb-4">
               <%= image_tag 'Cabinet.png',class:'img-project' %>
             </div>
           </div>
         </div>
       </div>
       <div class="col-12">
-      <h2 class="h2 mt-5">Activité</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis autem voluptatibus dicta similique tempore dolore tenetur dolorem, saepe quibusdam voluptas qui hic excepturi impedit laboriosam. Ducimus maxime porro architecto laudantium?</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit odit laboriosam qui hic illum perspiciatis quibusdam error iure exercitationem cupiditate ex nostrum, velit enim. Natus, enim qui. Doloremque, est voluptates.</p>
-      <h2 class="h2 mt-4" id="tarif">Tarification</h2>
-        <table class="table table-striped">
+      <h2 class="h2 mt-4">Activité</h2>
+      <p>Le Docteur Lucienne Ramaroson vous reçoit le mardi, le mercredi et le vendredi de 16h30 à 20h. Les consultations se font sur RDV exclusivement.
+      </p>      
+      <h2 class="h2 mt-4 mb-4" id="tarif">Honoraires</h2>
+        <table class="table table-striped text-center">
           <thead>
             <tr>
               <th scope="col"></th>
-              <th scope="col">Mardi</th> 
-              <th scope="col">Mercredi</th>
-              
+              <th scope="col">Consultation</th> 
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="col">Enfant *</th>
-              <th scope="col">20€</th>
-              <th scope="col">16h</th>
+              <th scope="col">25€</th>
             </tr>
           </tbody>
           <tbody>
             <tr>
               <th scope="col">Adulte *</th>
-              <th scope="col">25€</th>
-              <th scope="col">25€</th>
+              <th scope="col">25€</th>            
             </tr>
           </tbody>
         </table>
-        <p>* Mode paiement accepter: Espèce ou chéque.</p>
+        <p>* Pour une personne, Mode paiement accepter: Espèce ou chéque.</p>
       </div>
       <main role="main" class="main-banner" id="blog-banner">
         <div class="container mt-5 mb-4">
@@ -84,7 +87,7 @@
       <div class="container mb-5">
         <div class="row">
           <div class="col-md-8">
-            <p>Vous pouvez prendre rendez-vous par téléphone ou booker rendez-vous.</p>
+            <p>Vous pouvez prendre RDV par téléphone ou réservez un créneau via le bouton "Prendre rendez-vous" en haut de la page.</p>
             <div class="row mt-5">
               <div class="col-md-6 col-xl-5">
                 <p class="h4"><i class="fab fa-twitter text-info mr-2"></i> Telephone</p>
@@ -105,9 +108,8 @@
           </div>
         </div>
       </div>
-      <%= render 'shared/header-footer' %>
     </div>
+    <%= render 'shared/header-footer' %>
   </div>
-</div>
 </section>
 

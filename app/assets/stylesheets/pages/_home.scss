@@ -35,33 +35,16 @@
 .about .about-content .right {
   width: 55%;
 } 
-.about .about-content .right .text {
+.about .about-content .left .text {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.about .about-content .right .text span {
-  color:#31708f ;
-}
+
 .about .about-content .left p {
   text-align: justify;
 }
-.about .about-content .right a {
-  // display: inline-block;
-  background: #31708f ;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 30px;
-  margin-top: 20px;
-  border-radius: 6px;
-  border: 2px solid #31708f ;
-  transition: all 0.3s ease;
-}
-.about .about-content .right a:hover {
-  color: #31708f ;
-  background: none;
-}
+
 .column-left {
   padding-left: -15px !important;
 }

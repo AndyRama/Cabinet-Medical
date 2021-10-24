@@ -21,6 +21,13 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 
+// External Calendar
+
+// import Calendar from 'rc-calendar';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// ReactDOM.render(<Calendar />, container);
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 

@@ -17,19 +17,27 @@
       <li class="nav-item">
         <%= link_to "Legal","#", class: "nav-link btn btn-ghost mt-1" %>
       </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-ghost mt-1" data-toggle="modal" data-target="#registerModal">
+            Register
+        </button>
+        <button type="button" class="btn btn-ghost mt-1" data-toggle="modal" data-target="#loginModal">
+            Login
+        </button>
+      </li>
       <% if user_signed_in?%>
+        <li class="nav-item">
+          <%= link_to "Home", "#", class: "nav-link btn btn-ghost mt-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact","#contact", class: "nav-link btn btn-ghost mt-1" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Legal","#", class: "nav-link btn btn-ghost mt-1" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link btn btn-ghost mt-1" %>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <button type="button" class="btn btn-ghost mt-1" data-toggle="modal" data-target="#registerModal">
-              Register
-          </button>
-          <button type="button" class="btn btn-ghost mt-1" data-toggle="modal" data-target="#loginModal">
-              Login
-          </button>
-          </li>
       <% end %>
     </ul>
   </div>

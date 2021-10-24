@@ -48,3 +48,22 @@
   }
 }
 
+@media (max-width: 360px) {
+  /* For a screen < 360px, this CSS will be read */
+  .container {
+    width: 100%;
+  }
+  .banner {
+    width: 400px;
+    height:325vh !important;
+  }  
+  .img-project {
+    height: 200px;
+    width: 300px;
+  }
+  .iframe {
+    height: 200px !important;
+    width: 200px !important;
+  }
+}
+
